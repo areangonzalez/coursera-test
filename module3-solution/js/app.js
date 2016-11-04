@@ -43,6 +43,7 @@
 			ctrl.searchTerm = searchTerm;
 			ctrl.removeItem = removeItem;
 			ctrl.msgError = "";
+			ctrl.found = [];
 
 			function searchTerm(term) {
 				MenuSearchService.getMatchedMenuItems(term).then(
@@ -58,6 +59,7 @@
 			}
 
 			function removeItem(index) {
+				console.log(index);
 			    ctrl.found.splice(index, 1);
 			};
 		}
